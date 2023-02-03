@@ -1,0 +1,108 @@
+.about {
+    position: relative;
+    padding-bottom: 100px;
+
+    @include mobile {
+        padding: 65px 0 55px 0;
+    }
+
+    &__bg {
+        position: absolute;
+        top: -224px;
+        left: 0;
+        z-index: -1;
+        height: 1100px;
+        width: 100%;
+        object-fit: cover;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__bg-mob {
+        display: none;
+
+        @include mobile {
+            max-width: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+    
+    &__title {
+        color: #FFFFFF;
+        margin-bottom: 58px;
+
+        @include mobile {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__item {
+        @include mobile {
+            text-align: center;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 60px;
+
+            @include mobile {
+                margin-bottom: 40px;
+            }
+        }
+
+        &:last-child {
+            text-align: right;
+
+            .about__text {
+                margin-left: auto;
+
+                @include mobile {
+                    margin-left: 0;
+                }
+            }
+
+            @include mobile {
+                text-align: center;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        line-height: 21px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 10px;
+
+        @include mobile {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 25px;
+        color: #FFFFFF;
+        max-width: 660px;
+
+        @include mobile {
+            font-size: 18px;
+            line-height: 22px;
+            max-width: 100%;
+        }
+    }
+
+    &__btn {
+        margin-top: 55px;
+    }
+}

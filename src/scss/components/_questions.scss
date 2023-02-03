@@ -1,0 +1,357 @@
+.questions {
+    position: relative;
+    padding: 30px 0 50px 0;
+
+    &__bg-mob {
+        display: none;
+
+        @include mobile {
+            max-width: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 110%;
+            z-index: -1;
+        }
+    }
+
+    &::after {
+        content: "";
+        background: url("../img/questions/img.png") no-repeat;
+        width: 1200px;
+        height: 1136px;
+        display: block;
+        position: absolute;
+        right: -400px;
+        top: -95px;
+        z-index: -1;
+
+        @media  (max-width: 1600px) {
+            right: -500px;
+        }
+
+        @include middledesk {
+            right: -600px;
+        }
+
+        @include minidesk {
+            right: -800px;
+        }
+
+        @include tablet {
+            top: 30px;
+            right: -860px;
+            background-image: url("../img/questions/img-2.png");
+        }
+
+        @include minitablet {
+            right: -970px;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 44px;
+        line-height: 53px;
+        letter-spacing: 2.6px;
+        text-transform: uppercase;
+        color: #000000;
+
+        @include minitablet {
+            font-size: 36px;
+            line-height: 45px;
+        }
+
+        @include mobile {
+            font-size: 26px;
+            line-height: 30px;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 2px;
+        color: #000000;
+        margin-bottom: 18px;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 25px;
+        color: #000000;
+        max-width: 402px;
+        margin: 0 auto 20px;
+
+        @include minitablet {
+            font-size: 18px;
+            line-height: 20px;
+        }
+    }
+}
+
+.questions-form {
+    width: 50%;
+
+    @include minitablet {
+        width: 60%;
+    }
+
+    @include mobile {
+        width: 100%;
+    }
+
+    label {
+        display: block;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 16px;
+        color: #000000;
+        margin-bottom: 5px;
+
+        @include tablet {
+            font-size: 16px;
+            line-height: 16px;
+        }
+
+        @include mobile {
+            text-align: center;
+        }
+    }
+
+    span {
+        font-size: 16px;
+        line-height: 16px;
+        display: block;
+        color: #7E7352;
+        margin-bottom: 20px;
+
+        @include minitablet {
+            font-size: 14px;
+        }
+    }
+
+    &__group {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        &:first-child {
+            label {
+                font-weight: 400;
+            }
+            .questions-form__input {
+                border-width: 2px;
+            }
+        }
+    }
+
+    &__input {
+        border: 0.5px solid rgba(0, 0, 0, 0.82);
+        display: block;
+        width: 100%;
+        padding: 11px 10px;
+
+        @include tablet {
+            padding: 8px 10px;
+        }
+
+        @include mobile {
+            background-color: transparent;
+        }
+
+        &::placeholder {
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 16px;
+            color: #838383;
+
+            @include tablet {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__btn {
+        @include mobile {
+            width: 100%;
+        }
+    }
+}
+
+/* .systems-order {
+    position: relative;
+    
+    &__bg {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__inner {
+        max-width: 562px;
+        margin-left: auto;
+        text-align: center;
+
+        h2 {
+            font-size: 32px;
+            color: #000;
+            margin-bottom: 20px;
+        }
+        
+    }
+
+    &__btn {
+        width: 100%;
+        text-align: center;
+    }
+} */
+
+.questions-systems {
+    position: relative;
+    padding-top: 105px;
+    padding-bottom: 195px;
+
+    @include tablet {
+        padding-bottom: 40px;
+    }
+
+    @include minitablet {
+        padding: 312px 0 45px 0;
+    }
+
+    @include mobile {
+        padding-top: 287px;
+    }
+
+    &__bg {
+        position: absolute;
+        top: -110px;
+        left: 0;
+        width: 100%;
+        height: 1360px;
+        object-fit: cover;
+        z-index: -1;
+
+        @include minitablet {
+            display: none;
+        }
+
+        &--mob {
+            display: none;
+
+            @include minitablet {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__order {
+        text-align: center;
+        max-width: 700px;
+        margin-left: auto;
+        padding-bottom: 105px;
+
+        @include minitablet {
+            display: flex;
+            flex-direction: column-reverse;
+            padding-bottom: 44px;
+            max-width: 100%;
+            margin-left: 0;
+        }
+
+        h2 {
+            font-size: 38px;
+            line-height: 42px;
+            margin-bottom: 20px;
+            letter-spacing: 2.5px;
+
+            @include minitablet {
+                font-size: 26px;
+                line-height: 30px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .questions-form {
+        @include minitablet {
+            width: 100%;
+        }
+    }
+
+    &__title,
+    &__subtitle {
+        color: #fff;
+        margin: 0 auto;
+    }
+
+    &__subtitle {
+        margin-top: 20px;
+    }
+
+    &__inner {
+        display: flex;
+        gap: 80px;
+        margin-top: 46px;
+
+        @include minitablet {
+            display: block;
+            margin-top: 20px;
+        }
+
+        label,input,span {
+            color: #fff;
+        }
+
+        input {
+            background-color: transparent;
+            border-color: #fff;
+
+            &::placeholder {
+                color: #fff;
+            }
+        }
+    }
+
+    &__text {
+        width: 50%;
+        font-size: 22px;
+        line-height: 25px;
+        color: #fff;
+
+        @include minitablet {
+            width: 100%;
+            font-size: 18px;
+            line-height: 17px;
+            margin-top: 20px;
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

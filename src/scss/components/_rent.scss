@@ -1,0 +1,137 @@
+.rent {
+    @include minitablet {
+        padding: 25px 0;
+    }
+
+    &__inner {
+        display: flex;
+        position: relative;
+    }
+
+    &__content {
+        width: 50%;
+
+        @include minitablet {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        max-width: 571px;
+
+        @include minitablet {
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        max-width: 464px;
+        margin-bottom: 28px;
+
+        @include minitablet {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        @include mobile {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    &__caption {
+        font-weight: 450;
+        font-size: 22px;
+        line-height: 24px;
+
+        @include minitablet {
+            margin-top: 30px;
+        }
+    }
+
+    &__services {
+        display: flex;
+        justify-content: space-between;
+        max-width: 476px;
+
+        @include minitablet {
+            max-width: 100%;
+        }
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    &__service {
+        font-size: 20px;
+        line-height: 24px;
+        padding-left: 45px;
+        padding-top: 11px;
+        padding-bottom: 13px;
+        margin-bottom: 20px;
+
+        &:nth-child(1) {
+            background: url("../img/svg/delivery.svg") left no-repeat;
+        }
+
+        &:nth-child(2) {
+            background: url("../img/svg/insurance.svg") left no-repeat;
+        }
+
+        &:nth-child(3) {
+            background: url("../img/svg/montage.svg") left no-repeat;
+        }
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 18px;
+        color: #7F7F7F;
+        max-width: 441px;
+
+        @include minitablet {
+            max-width: 100%;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__btn {
+        margin-top: 21px;
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+        
+    }
+
+    &__img {
+        position: absolute;
+        right: 0;
+        top: -120px;
+        z-index: 2;
+        max-width: 100%;
+
+        @include minitablet {
+            display: none;
+        }
+
+        &--mob {
+            display: none;
+            max-width: 100%;
+
+            @include minitablet {
+                display: block;
+            }
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+}
+

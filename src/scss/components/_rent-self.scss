@@ -1,0 +1,99 @@
+.rent-self {
+    padding-top: 30px;
+    position: relative;
+
+    @include mobile {
+        padding: 20px 0 10px 0;
+    }
+
+    &::after {
+        content: "";
+        background: url("../img/rent-self/Frame.png");
+        width: 1500px;
+        height: 800px;
+        display: block;
+        position: absolute;
+        right: -500px;
+        top: -50px;
+        z-index: -2;
+        background-size: 100%;
+
+        @media (max-width: 1600px) {
+            right: -900px;
+        }
+
+        @include tablet {
+            right: -1100px;
+        }
+
+        @include minitablet {
+            right: -1150px;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__img-mob {
+        &::after {
+            display: none;
+            @include mobile {
+                content: "";
+                background: url("../img/rent-self/Frame-2.png");
+                width: 600px;
+                height: 275px;
+                top: -5px;
+                background-size: 100%;
+                display: inline-block;
+                position: relative;
+                left: -15px;
+                margin-bottom: 10px;
+            }
+        }
+        
+    }
+
+    &__inner {
+        width: 41.66666667%;
+
+        @include tablet {
+            width: 50%;
+        }
+
+        @include minitablet {
+            width: 60%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+
+            @include mobile {
+                text-align: center;
+                font-size: 26px;
+                line-height: 30px;
+                margin-bottom: 10px;
+            }
+        }
+
+        p {
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 25px;
+            color: #000000;
+
+            @include mobile {
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

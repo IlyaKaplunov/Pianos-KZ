@@ -1,0 +1,154 @@
+.piano-care {
+    padding-top: 150px;
+
+    @media (max-width: 840px) {
+        padding-top: 120px;
+    }
+
+    @include minitablet {
+        padding: 15px 0;
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 30px;
+
+        @include tablet {
+            gap: 0;
+        }
+
+        @include minitablet {
+            display: block;
+        }
+    }
+
+    &__images {
+        grid-column: 5 span;
+
+        @include tablet {
+            grid-column: 6 span;
+        }
+
+        @include minitablet {
+            margin-bottom: 28px;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+
+            &:first-child {
+                margin-bottom: 40px;
+            }
+
+            @include minitablet {
+                display: inline-block;
+            }
+        }
+    }
+
+    &__img {
+        &--one {
+            @include minitablet {
+                width: 370px;
+            }
+
+            @include mobile {
+                width: 313px;
+            }
+        }
+
+        &--two, &--three {
+            @include minitablet {
+                width: 49%;
+            }
+        }
+    }
+
+    &__content {
+        grid-column: 7 span;
+
+        @include tablet {
+            grid-column: 6 span;
+        }
+
+        h2 {
+            text-align: right;
+            margin-bottom: 10px;
+            font-size: 32px;
+            line-height: 36px;
+
+            @include minitablet {
+                text-align: left;
+            }
+
+            @include mobile {
+                font-size: 25px;
+                line-height: 30px;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 22px;
+        line-height: 25px;
+        text-align: right;
+        color: #4C4C4C;
+
+        @include mobile {
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        @include minitablet {
+            text-align: left;
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__important {
+        border: 1px solid #000000;
+        max-width: 500px;
+        padding: 14px 24px;
+        margin: 55px 0 55px auto;
+
+        @include minitablet {
+            margin: 10px 0 16px 0;
+            max-width: none;
+        }
+
+        @include mobile {
+            padding: 13px 9px;
+        }
+
+        h3 {
+            font-size: 30px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+
+            @include minitablet {
+                font-size: 24px;
+            }
+        }
+
+        p {
+            font-size: 22px;
+            line-height: 25px;
+            text-align: center;
+            color: #4C4C4C;
+
+            @include minitablet {
+                font-size: 18px;
+                line-height: 20px;
+            }
+        }
+    }
+}

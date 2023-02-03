@@ -1,0 +1,50 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// Partials (Common)
+@import "./components/header";
+@import "./components/contacts";
+@import "./components/page-home";
+
+// Partials (Main page)
+@import "./components/home";
+@import "./components/questions";
+@import "./components/purchase";
+@import "./components/products";
+@import "./components/service";
+@import "./components/rent";
+@import "./components/answer";
+@import "./components/additional";
+@import "./components/news";
+@import "./components/about";
+@import "./components/media";
+@import "./components/popular";
+
+// Partials (Customization)
+@import "./components/custom-about";
+@import "./components/custom-service";
+@import "./components/consultation";
+
+// Partials (Rent)
+@import "./components/rent-about";
+@import "./components/rent-key";
+@import "./components/rent-self";
+@import "./components/pianist";
+
+// Partials (Additional systems)
+@import "./components/addsystems";
+@import "./components/noiselessly";
+@import "./components/piano-care";
+
+// Partials (About page)
+@import "./components/about-info";
+@import "./components/about-why";
+@import "./components/docs";
+@import "./components/partners";
+
+// Partials (Contacts)
+@import "./components/how-to-find";
+@import "./components/contacts-info";

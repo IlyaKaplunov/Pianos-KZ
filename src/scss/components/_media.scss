@@ -1,0 +1,134 @@
+.media {
+    padding-bottom: 100px;
+    padding-top: 50px;
+
+    @include mobile {
+        padding-bottom: 30px;
+    }
+    
+    &__title {
+        &--two {
+            max-width: 640px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__box {
+        @include tablet {
+            overflow-x: auto;
+            margin: 0 -15px;
+        }
+    }
+
+    &__logos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 52px;
+        margin-bottom: 85px;
+
+        @include minitablet {
+            width: 150%;
+            margin-bottom: 40px;
+            margin-top: 31px;
+            padding: 0 15px;
+        }
+    }
+
+    &__logo {
+        &:not(:last-child) {
+            @include tablet {
+                margin-right: 30px;
+            }
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__subtitle {
+        max-width: 320px;
+        margin-bottom: 50px;
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 80px 48px;
+
+        @include minitablet {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        
+    }
+
+    &__icon {
+        max-width: 100%;
+
+        @include mobile {
+            width: 30%;
+        }
+    }
+
+    &__info {
+        margin-left: 21px;
+
+        @include minitablet {
+            margin-left: 10px;
+        }
+
+        @include mobile {
+            width: 70%;
+        }
+    }
+
+    &__caption {
+        font-size: 24px;
+        line-height: 23px;
+        color: #000000;
+        font-family: 'Garamond Premier Pro';
+
+        @include mobile {
+            font-size: 20px;
+            line-height: 17px;
+        }
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 25px;
+        color: #4C4C4C;
+        margin: 10px 0;
+        max-width: 355px;
+
+        @include mobile {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
+    &__link {
+        font-size: 16px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        color: #B8A148;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #B8A148;
+        }
+    }
+}
+

@@ -1,0 +1,173 @@
+.answer {
+    padding-top: 120px;
+    padding-bottom: 160px;
+    position: relative;
+    
+    @include minitablet {
+        padding-top: 65px;
+        padding-bottom: 60px;
+    }
+
+    &__bg {
+        position: absolute;
+        top: -105px; 
+        left: 0;
+        width: 100%;
+        object-fit: cover;
+        height: 135%;
+        z-index: -1;
+
+        @include minitablet {
+            display: none;
+        }
+    }
+
+    &__bg-mob {
+        display: none;
+
+        @include minitablet {
+            max-width: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+    
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 91px;
+
+        @include minitablet {
+            gap: 54px;
+        }
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    &__info {
+        color: #fff;
+        text-align: center;
+    }
+
+    &__title {
+        color: #fff;
+        max-width: 440px;
+        margin: 0 auto 15px;
+    }
+
+    &__subtitle {
+        margin-bottom: 28px;
+    }
+
+    &__caption {
+        display: block;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 16px;
+        margin-bottom: 5px;
+    }
+
+    &__textarea {
+        border: 1.5px solid rgba(255, 255, 255, 0.82);
+        background-color: transparent;
+        width: 100%;
+        height: 112px;
+        resize: none;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 25px;
+        padding: 12px;
+        color: #FFFFFF;
+    }
+
+    &__text {
+        max-width: 402px;
+        margin: 0 auto;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 25px;
+        margin-top: 24px;
+
+        @include mobile {
+            display: none;
+        }
+    }
+}
+
+.answer-form {
+    padding-top: 30px;
+    &__group {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        &:first-child {
+            .answer-form__label {
+                font-weight: 400;
+            }
+
+            .answer-form__input {
+                border: 1.5px solid rgba(255, 255, 255, 0.82);
+            }
+        }
+    }
+
+    &__label {
+        font-size: 20px;
+        line-height: 16px;
+        display: block;
+        color: #FFFFFF;
+        margin-bottom: 8px;
+        font-weight: 300;
+
+        @include mobile {
+            text-align: center;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
+    &__input {
+        border: 0.5px solid #8E8E8E;
+        background-color: transparent;
+        width: 100%;
+        padding: 11px 10px;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 16px;
+        color: #FFFFFF;
+
+        &::placeholder {
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 16px;
+            color: #8E8E8E;
+
+            @include mobile {
+                font-size: 18px;
+                line-height: 16px;
+            }
+        }
+    }
+
+    &__text {
+        display: block;
+        font-size: 16px;
+        line-height: 16px;
+        margin-bottom: 20px;
+        color: #DDC887;
+    }
+
+    &__btn {
+        margin: 0 auto;
+        max-width: 402px;
+        width: 100%;
+    }
+}

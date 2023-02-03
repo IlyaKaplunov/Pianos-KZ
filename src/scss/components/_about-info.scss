@@ -1,0 +1,45 @@
+.about-info {
+    padding-top: 40px;
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__inner {
+        display: flex;
+        gap: 30px;
+
+        @include minitablet {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__logo {
+        width: 25%;
+
+        @include minitablet {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__text {
+        font-size: 22px;
+        line-height: 25px;
+        color: #4C4C4C;
+        width: 75%;
+
+        @include minitablet {
+            font-size: 18px;
+            line-height: 20px;
+            width: 100%;
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+

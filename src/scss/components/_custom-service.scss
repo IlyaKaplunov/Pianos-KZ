@@ -1,0 +1,117 @@
+.custom-service {
+    position: relative;
+    padding-top: 200px;
+    
+    @include minitablet {
+        padding-top: 70px;
+        padding-bottom: 40px;
+    }
+    
+    &__bg {
+        position: absolute;
+        top: -50px;
+        left: 0;
+        z-index: -1;
+        height: 1120px;
+        width: 100%;
+        object-fit: cover;
+
+        @include tablet {
+            height: 1250px;
+        }
+
+        @media (max-width: 850px) {
+            height: 1370px;
+        }
+
+        @include minitablet {
+            display: none;
+        }
+
+        &--mob {
+            display: none;
+
+            @include minitablet {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__title {
+        color: #fff;
+        margin-bottom: 36px;
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 53px;
+
+        @include minitablet {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 40px 0;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+
+        @include minitablet {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__icon {
+        @include minitablet {
+            margin-bottom: 10px;
+        }
+
+        svg {
+            fill: transparent;
+            stroke: #B8A148;
+        }
+    }
+
+    &__desc {
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 25px;
+        color: #FFFFFF;
+        margin-left: 13px;
+
+        @include minitablet {
+            margin-left: 0;
+        }
+
+        @include mobile {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: right;
+        display: block;
+        color: #FFFFFF;
+        max-width: 445px;
+        margin-left: auto;
+        margin-top: 50px;
+
+        @include minitablet {
+            margin-right: auto;
+            max-width: 268px;
+            text-align: center;
+        }
+    }
+}

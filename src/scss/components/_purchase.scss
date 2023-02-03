@@ -1,0 +1,133 @@
+.purchase {
+    position: relative;
+    padding-top: 20px;
+
+    @include minitablet {
+        padding-top: 30px;
+    }
+    
+    &__bg {
+        position: absolute;
+        top: -155px;
+        left: 0;
+        z-index: -1;
+        height: 1110px;
+        width: 100%;
+        object-fit: cover;
+
+        @media (max-width: 1470px) {
+            top: -160px;
+        }
+
+        @include tablet {
+            top: -170px;
+            height: 1020px;
+        }
+
+        @include minitablet {
+            display: none;
+        }
+    }
+
+    &__bg-mob {
+        display: none;
+
+        @include minitablet {
+            max-width: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+
+    &__title {
+        color: #FFFFFF;
+        padding-top: 80px;
+
+        @include tablet {
+            padding-top: 40px;
+        }
+    }
+
+    &__subtitle {
+        color: #FFFFFF;
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 28px;
+        margin-top: 80px;
+        padding-bottom: 100px;
+
+        @include tablet {
+            margin-top: 21px;
+            padding-bottom: 60px;
+        }
+
+        @include minitablet {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__item {
+        grid-column: 3 span;
+
+        @include mobile {
+            display: flex;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__count {
+        font-family: 'BazhanovC';
+        font-style: italic;
+        font-size: 30px;
+        line-height: 30px;
+        color: #F1DC9A;
+        margin-bottom: 15px;
+
+        @include mobile {
+            margin-right: 11px;
+            font-size: 24px;
+            line-height: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 22px;
+        line-height: 19px;
+        color: #F1DC9A;
+        padding-bottom: 12px;
+        border-bottom: 1px solid;
+
+        @include tablet {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 19px;
+        color: #B3B3B3;
+        padding-top: 10px;
+
+        @include tablet {
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        span {
+            color: #F1DC9A;
+        }
+    }
+}
