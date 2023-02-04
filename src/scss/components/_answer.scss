@@ -43,10 +43,6 @@
         gap: 91px;
 
         @include minitablet {
-            gap: 54px;
-        }
-
-        @include mobile {
             display: block;
         }
     }
@@ -95,8 +91,21 @@
         line-height: 25px;
         margin-top: 24px;
 
-        @include mobile {
+        @include minitablet {
             display: none;
+        }
+
+        &--mob {
+            display: none;
+
+            @include minitablet {
+                display: block;
+                font-size: 18px;
+                line-height: 22px;
+                max-width: 264px;
+                text-align: center;
+                color: #FFFFFF;
+            }
         }
     }
 }

@@ -1601,7 +1601,7 @@ body.lock {
   margin-bottom: 38px;
 }
 .products__subtitle {
-  font-family: "Garamond Premier Pro";
+  font-family: "GaramondPremrPro";
   font-size: 24px;
   line-height: 46px;
   letter-spacing: 6px;
@@ -1860,7 +1860,7 @@ body.lock {
   }
 }
 .catalog__price {
-  font-family: "Garamond Premier Pro";
+  font-family: "GaramondPremrPro";
   font-weight: 600;
   font-size: 16px;
   line-height: 18px;
@@ -1919,7 +1919,6 @@ body.lock {
   display: grid;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
 }
 @media (max-width: 768px) {
   .service__body {
@@ -1945,7 +1944,7 @@ body.lock {
 @media (max-width: 1024px) {
   .service__info {
     background-image: url("../img/service/Frame-tablet.png");
-    background-position: 0 263px;
+    background-position: 0 312px;
   }
 }
 @media (max-width: 768px) {
@@ -1966,9 +1965,11 @@ body.lock {
 .service__title {
   color: #fff;
   position: absolute;
-  top: 50%;
+  top: 55%;
+  font-size: 43px;
   left: 0;
   text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 @media (max-width: 768px) {
   .service__title {
@@ -1978,6 +1979,7 @@ body.lock {
 .service__content {
   padding-top: 270px;
   max-width: 473px;
+  margin-left: 50px;
 }
 @media (max-width: 768px) {
   .service__content {
@@ -2224,11 +2226,6 @@ body.lock {
 }
 @media (max-width: 768px) {
   .answer__body {
-    gap: 54px;
-  }
-}
-@media (max-width: 576px) {
-  .answer__body {
     display: block;
   }
 }
@@ -2271,9 +2268,22 @@ body.lock {
   line-height: 25px;
   margin-top: 24px;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .answer__text {
     display: none;
+  }
+}
+.answer__text--mob {
+  display: none;
+}
+@media (max-width: 768px) {
+  .answer__text--mob {
+    display: block;
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 264px;
+    text-align: center;
+    color: #FFFFFF;
   }
 }
 
