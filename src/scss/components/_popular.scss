@@ -43,11 +43,21 @@
         color: #fff;
         max-width: 500px;
         margin-bottom: 10px;
+
+        @include mobile {
+            font-size: 26px;
+            line-height: 30px;
+        }
     }
 
     &__subtitle {
         color: #fff;
         margin-bottom: 50px;
+
+        @include mobile {
+            font-size: 16px;
+            line-height: 22px;
+        }
     }
 
     &__box {
