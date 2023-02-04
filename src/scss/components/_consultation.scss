@@ -149,6 +149,7 @@
 
         &--mob {
             position: relative;
+            
             &::before {
                 @include mobile {
                     content: "";

@@ -55,15 +55,15 @@
         }
       
         &::after {
-          content: "";
-          position: absolute;
-          bottom: -20px;
-          left: 50%;
-          transform: translateX(-50%);
-          background-color: #F1DC9A;
-          width: 84px;
-          height: 1px;
-          display: block;
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #F1DC9A;
+            width: 84px;
+            height: 1px;
+            display: block;
         }
     }
 

@@ -1,7 +1,6 @@
 .rent-key {
     position: relative;
-    padding-top: 190px;
-    padding-bottom: 120px;
+    padding: 190px 0 120px 0;
 
     @include minitablet {
         padding: 70px 0 45px 0;
@@ -89,6 +88,7 @@
 
     &__item {
         text-align: center;
+        
         &:nth-child(2) {
             img {
                 transform: rotate(90deg);

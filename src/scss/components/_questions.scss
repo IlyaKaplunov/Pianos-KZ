@@ -6,18 +6,20 @@
         padding-bottom: 30px;
     }
 
-    &__bg-mob {
-        display: none;
+    &__bg {
+        &--mob {
+            display: none;
 
-        @include mobile {
-            max-width: 100%;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 110%;
-            z-index: -1;
+            @include mobile {
+                max-width: 100%;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 110%;
+                z-index: -1;
+            }
         }
     }
 

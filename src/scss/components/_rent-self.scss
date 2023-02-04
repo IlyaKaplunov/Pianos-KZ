@@ -38,6 +38,7 @@
     &__img-mob {
         &::after {
             display: none;
+
             @include mobile {
                 content: "";
                 background: url("../img/rent-self/Frame-2.png");
@@ -51,7 +52,6 @@
                 margin-bottom: 10px;
             }
         }
-        
     }
 
     &__inner {
