@@ -24,6 +24,14 @@
             height: 1020px;
         }
 
+        @media (max-width: 910px) {
+            height: 1080px;
+        }
+
+        @media (max-width: 865px) {
+            height: 1135px;
+        }
+
         @include minitablet {
             display: none;
         }

@@ -63,14 +63,14 @@
     }
 
     h4 {
-        font-family: 'Garamond Premier Pro';
+        font-family: GaramondPremrPro;
         font-size: 32px;
         line-height: 36px;
         letter-spacing: 2.5px;
         text-transform: uppercase;
         color: #000000;
         margin-bottom: 10px;
-        max-width: 480px;
+        max-width: 485px;
 
         @include tablet {
             font-size: 22px;
@@ -83,10 +83,12 @@
         font-size: 22px;
         line-height: 25px;
         color: #4C4C4C;
+        max-width: 443px;
 
         @include tablet {
             font-size: 16px;
             line-height: 20px;
+            max-width: 100%;
         }
     }
 
@@ -94,8 +96,8 @@
         width: 63.33333333%;
         max-width: 100%;
         position: relative;
-        top: 25px;
-        right: 55px;
+        top: 20px;
+        right: 60px;
         z-index: -2;
 
         @include minitablet {
@@ -142,6 +144,7 @@
 
         img {
             max-width: 100%;
+            width: 100%;
         }
     }
 
@@ -158,8 +161,8 @@
 
         h5 {
             font-weight: 400;
-            font-size: 16px;
-            line-height: 22px;
+            font-size: 20px;
+            line-height: 21px;
             margin-bottom: 11px;
 
             @include minitablet {
@@ -168,6 +171,8 @@
         }
 
         p {
+            max-width: 493px;
+            
             @include mobile {
                 font-weight: 300;
                 font-size: 18px;
