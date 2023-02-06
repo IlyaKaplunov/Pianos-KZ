@@ -26,7 +26,7 @@
             stroke: #F1DC9A;
             stroke-width: 5px;
 
-            @include mobile {
+            @media (max-width: 610px) {
                 width: 25px;
                 height: 47px;
             }
@@ -35,15 +35,19 @@
         &--prev {
             left: 16%;
 
+            @include minidesk {
+                left: 3%;
+            }
+
             @include tablet {
-                left: 5%;
+                left: 2%;
             }
 
             @include minitablet {
                 left: 1%;
             }
 
-            @include mobile {
+            @media (max-width: 610px) {
                 left: 3%;
             }
         }
@@ -51,15 +55,19 @@
         &--next {
             right: 16%;
 
+            @include minidesk {
+                right: 3%;
+            }
+
             @include tablet {
-                right: 5%;
+                right: 2%;
             }
 
             @include minitablet {
                 right: 1%;
             }
 
-            @include mobile {
+            @media (max-width: 610px) {
                 right: 3%;
             }
         }
@@ -79,6 +87,13 @@
             background-position: center;
         }
 
+        @media (max-width: 610px) {
+            margin-bottom: 70px;
+            padding: 65px 0 !important;
+            background-position: 0 0 !important;
+            background-size: 100% 100% !important;
+        }
+
         &:nth-child(1) {
             background-image: url("../img/partners/bg-1.png");
             padding: 60px 0 70px 0;
@@ -86,10 +101,15 @@
             @include tablet {
                 background-image: url("../img/partners/bg-tabl_1.png");
                 padding: 34px 0 20px 0;
-                background-position: 0 -30px;
+                background-position: 0 -100px;
+                background-size: 100% 135%;
             }
 
             @include minitablet {
+                background-position: -30px -100px;   
+            }
+
+            @media (max-width: 610px) {
                 background-image: url("../img/partners/bg-mob_1.png");
                 background-position: 0 0;
             }
@@ -102,9 +122,15 @@
             @include tablet {
                 background-image: url("../img/partners/bg-tabl_2.png");
                 padding-bottom: 0;
+                background-position: center;
+                background-size: 100% 160%;
             }
 
             @include minitablet {
+                background-position-x: 40px;
+            }
+
+            @media (max-width: 610px) {
                 background-image: url("../img/partners/bg-mob_2.png");
             }
         }
@@ -117,11 +143,18 @@
                 background-image: url("../img/partners/bg-tabl_3.png");
                 background-position: 0 -90px;
                 padding-bottom: 20px;
+                background-size: 100%;
             }
 
             @include minitablet {
+                background-size: 100% 144%;
+                background-position-x: -35px;
+            }
+
+            @media (max-width: 610px) {
                 background-image: url("../img/partners/bg-mob_3.png");
                 background-position: 0 0;
+                background-size: 100% 100%;
             }
         }
 
@@ -132,9 +165,16 @@
             @include tablet {
                 background-image: url("../img/partners/bg-tabl_4.png");
                 padding-bottom: 40px;
+                background-size: 100% 125%;
+                background-position: 45px -30px;
             }
 
             @include minitablet {
+                background-position-x: 46px;
+                
+            }
+
+            @media (max-width: 610px) {
                 background-image: url("../img/partners/bg-mob_4.png");
             }
         }
@@ -146,9 +186,11 @@
             @include tablet {
                 background-image: url("../img/partners/bg-tabl_5.png");
                 padding: 10px 0 90px 0;
+                background-size: 100% 140%;
+                background-position-x: -40px;
             }
 
-            @include minitablet {
+            @media (max-width: 610px) {
                 background-image: url("../img/partners/bg-mob_5.png");
             }
         }
@@ -156,13 +198,13 @@
         &:nth-child(odd) {
             .partners__slider {
                 margin-left: auto;
-                margin-right: 55px;
-
-                @include tablet {
-                    margin-right: 46px;
-                }
+                margin-right: 50px;
 
                 @include minitablet {
+                    margin-right: 20px;
+                }
+
+                @media (max-width: 610px) {
                     margin: 0 auto;
                 }
             }
@@ -170,21 +212,18 @@
 
         &:nth-child(even) {
             .partners__slider {
-                @include tablet {
-                    margin-left: 86px;
+                @include minidesk {
+                    margin-left: 66px;
                 }
 
                 @include minitablet {
+                    margin-left: 50px;
+                }
+
+                @media (max-width: 610px) {
                     margin: 0 auto;
                 }
             }
-        }
-
-        @include minitablet {
-            background-position: 0 0;
-            background-size: 100% 100%;
-            margin-bottom: 70px;
-            padding: 30px 0 !important;
         }
     }
 
@@ -192,25 +231,26 @@
         max-width: 485px;
         margin: 0;
 
+        @include minidesk {
+            max-width: 375px;
+        }
+
         @include tablet {
-            max-width: 297px;
+            max-width: 355px;
         }
 
         @include minitablet {
-            max-width: 400px;
+            max-width: 300px;
         }
 
-        @include mobile {
-            padding: 0 25px;
+        @media (max-width: 610px) {
             max-width: 100%;
-        }
-
-        @media (max-width: 510px) {
-            padding: 0 25px;
+            margin: 0 auto;
+            padding: 0 30px;
         }
 
         .swiper-slide {
-            @include mobile {
+            @media (max-width: 610px) {
                text-align: center;
             }
         }
@@ -220,7 +260,7 @@
         margin: 0 auto;
         display: block;
 
-        @include mobile {
+        @media (max-width: 610px) {
             max-width: 197px;
         }
     }
