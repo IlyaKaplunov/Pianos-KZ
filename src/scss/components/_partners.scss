@@ -3,6 +3,7 @@
         max-width: 822px;
         margin: 0 auto 72px;
         text-align: center;
+        padding: 0 15px;
 
         @include mobile {
             margin-bottom: 20px;
@@ -74,26 +75,13 @@
         background-size: cover;
         background-position: 50% 0%;
 
-        &:not(:last-child) {
-            @include minitablet {
-                margin-bottom: 70px;
-                padding: 100px 0;
-            }
-        }
-
         @include tablet {
             background-position: center;
         }
 
-        @include minitablet {
-            background-position: 0 0;
-            background-size: 100% 100%;
-        }
-
         &:nth-child(1) {
             background-image: url("../img/partners/bg-1.png");
-            padding-bottom: 70px;
-            padding-top: 60px;
+            padding: 60px 0 70px 0;
 
             @include tablet {
                 background-image: url("../img/partners/bg-tabl_1.png");
@@ -103,8 +91,6 @@
 
             @include minitablet {
                 background-image: url("../img/partners/bg-mob_1.png");
-                background-position: 0 0;
-                padding: 65px 0;
             }
         }
 
@@ -119,7 +105,6 @@
 
             @include minitablet {
                 background-image: url("../img/partners/bg-mob_2.png");
-                padding: 65px 0;
             }
         }
 
@@ -135,8 +120,6 @@
 
             @include minitablet {
                 background-image: url("../img/partners/bg-mob_3.png");
-                background-position: 0 0;
-                padding: 65px 0;
             }
         }
 
@@ -151,7 +134,6 @@
 
             @include minitablet {
                 background-image: url("../img/partners/bg-mob_4.png");
-                padding: 65px 0;
             }
         }
 
@@ -166,7 +148,6 @@
 
             @include minitablet {
                 background-image: url("../img/partners/bg-mob_5.png");
-                padding: 65px 0;
             }
         }
         
@@ -195,6 +176,13 @@
                     margin: 0 auto;
                 }
             }
+        }
+
+        @include minitablet {
+            background-position: 0 0;
+            background-size: 100% 100%;
+            margin-bottom: 70px;
+            padding: 65px 0 !important;
         }
     }
 
