@@ -5229,7 +5229,7 @@ body.lock {
     background-position: 0 0;
     background-size: 100% 100%;
     margin-bottom: 70px;
-    padding: 65px 0 !important;
+    padding: 30px 0 !important;
   }
 }
 .partners__slider {
@@ -5248,13 +5248,13 @@ body.lock {
 }
 @media (max-width: 576px) {
   .partners__slider {
-    max-width: 387px;
-    margin: 0 auto;
+    padding: 0 25px;
+    max-width: 100%;
   }
 }
 @media (max-width: 510px) {
   .partners__slider {
-    max-width: 286px;
+    padding: 0 25px;
   }
 }
 @media (max-width: 576px) {
