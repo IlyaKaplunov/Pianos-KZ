@@ -205,6 +205,10 @@
             margin: 0 auto;
         }
 
+        @media (max-width: 510px) {
+            max-width: 286px;
+        }
+
         .swiper-slide {
             @include mobile {
                text-align: center;
