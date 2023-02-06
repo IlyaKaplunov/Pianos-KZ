@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header class="header lock-padding" id="header">
     <div class="container">
         <div class="header__body">
             <div class="header__top">
@@ -68,7 +68,7 @@
                 </nav>
                 <div class="header__contacts header__contacts--mob">
                     <a href="tel:+7 708 107 85 07" class="header__tel">+7 708 107 85 07</a>
-                    <a href="#" class="header__btn btn">Заказать звонок</a>
+                    <a href="#popup_2" class="header__btn btn popup__btn">Заказать звонок</a>
                     <a href="#" class="header__icon">
                         <img src="img/svg/cart.svg" alt="">
                     </a>
@@ -102,9 +102,10 @@
                 </div>
                 <div class="header__contacts">
                     <a href="tel:+7 708 107 85 07" class="header__tel">+7 708 107 85 07</a>
-                    <a href="#" class="header__btn btn">Заказать звонок</a>
-                    <a href="#" class="header__icon">
+                    <a href="#popup_2" class="header__btn btn  popup__btn">Заказать звонок</a>
+                    <a href="#" class="header__icon header__icon--cart">
                         <img src="img/svg/cart.svg" alt="">
+                        <div class="header__count">0</div>
                     </a>
                     <a href="#" class="header__icon">
                         <img src="img/svg/user.svg" alt="">
@@ -205,29 +206,238 @@
         <div class="docs__inner">
             <div class="docs__item">
                 <h3>письмо от petrof</h3>
-                <img src="img/docs/img-1.jpg" alt="">
+                <a href="">
+                    <img src="img/docs/img-1.jpg" alt="">
+                </a>
             </div>
             <div class="docs__item">
                 <h3>письмо от schimmel</h3>
-                <img src="img/docs/img-1.jpg" alt="">
+                <a href="">
+                    <img src="img/docs/img-1.jpg" alt="">
+                </a>
             </div>
             <div class="docs__item">
                 <h3>письмо от c.bechstein</h3>
-                <img src="img/docs/img-1.jpg" alt="">
+                <a href="">
+                    <img src="img/docs/img-1.jpg" alt="">
+                </a>
             </div>
             <div class="docs__item">
                 <h3>письмо от august forster</h3>
-                <img src="img/docs/img-1.jpg" alt="">
+                <a href="">
+                    <img src="img/docs/img-1.jpg" alt="">
+                </a>
             </div>
             <div class="docs__item">
                 <h3>письмо от fazioli</h3>
-                <img src="img/docs/img-1.jpg" alt="">
+                <a href="">
+                    <img src="img/docs/img-1.jpg" alt="">
+                </a>
             </div>
         </div>
     </div>
 </section>
-            
-            <section class="contacts">
+            <section class="partners">
+    <h2 class="partners__title section-title">о фабриках, с которыми мы работаем</h2>
+        <div class="partners__inner">
+            <div class="partners__sl">
+                <div class="partners__switches slider-switches">
+                    <button class="partners__switch slider-switch partners__switch--prev partners__switch--prev-one">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#arrow-prev"></use>
+                        </svg>
+                    </button>
+                    <button class="partners__switch slider-switch partners__switch--next partners__switch--next-one">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#arrow-next"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="container">
+                    <div class="partners__slider partners__slider-1 swiper">
+                        <img src="img/partners/logo-1.png" alt="" class="partners__logo">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="partners__text">
+                                    <p>Фортепиано PETROF производятся с 1864 года в городе Градец-Кралов,  в Чешской Республике. Предприятие до сих пор управляется представителями семьи Петрофовых, бережно хранящей традиции производства фортепиано. В 2007 году компания PETROF получила сертификат EEX, который с того периода является в форме печати частью всех инструментов. Демонстрирует европейское происхождение и высочайшего качества материалы.</p>
+                                    <p>PETROF особенно популярны среди музыкантов, которые ценят необычно мягкий, нежный, плавный и романтический звук. В течение многих десятилетий производства многое изменилось, но точная ручная работа, тщательный отбор материалов и совершенный романтический звук сохранился.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partners__text">
+                                    <p>Фортепиано PETROF производятся с 1864 года в городе Градец-Кралов,  в Чешской Республике. Предприятие до сих пор управляется представителями семьи Петрофовых, бережно хранящей традиции производства фортепиано. В 2007 году компания PETROF получила сертификат EEX, который с того периода является в форме печати частью всех инструментов. Демонстрирует европейское происхождение и высочайшего качества материалы.</p>
+                                    <p>PETROF особенно популярны среди музыкантов, которые ценят необычно мягкий, нежный, плавный и романтический звук. В течение многих десятилетий производства многое изменилось, но точная ручная работа, тщательный отбор материалов и совершенный романтический звук сохранился.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="partners__sl">
+                <div class="partners__switches slider-switches">
+                    <button class="partners__switch slider-switch partners__switch--prev partners__switch--prev-two">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#arrow-prev"></use>
+                        </svg>
+                    </button>
+                    <button class="partners__switch slider-switch partners__switch--next partners__switch--next-two">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#arrow-next"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="container">
+                    <div class="partners__slider partners__slider-2 swiper">
+                        <img src="img/partners/logo-2.png" alt="" class="partners__logo">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="partners__text">
+                                    <p>Компания FAZIOLI занимается производством роялей и концертных фортепиано с момента своего основания в 1981 году по инициативе инженера и пианиста Паоло Фациоли.</p>
+                                    <p>Любовь к музыке и глубокие научные знания, уникальное ремесленное мастерство, непрерывные технологические исследования и тщательный отбор материалов-это необходимые условия для производства роялей этой фирмы. FAZIOLI отказывается от любой логики промышленного производства и ставит своей целью достижения  бескомпромиссного качества. Предприятие расположено в 60 км к северо-востоку от Венеции в городе Сачиле (провинция Порденоне), в области, которая славится своими старинными традициями деревообработки.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partners__text">
+                                    <p>Компания FAZIOLI занимается производством роялей и концертных фортепиано с момента своего основания в 1981 году по инициативе инженера и пианиста Паоло Фациоли.</p>
+                                    <p>Любовь к музыке и глубокие научные знания, уникальное ремесленное мастерство, непрерывные технологические исследования и тщательный отбор материалов-это необходимые условия для производства роялей этой фирмы. FAZIOLI отказывается от любой логики промышленного производства и ставит своей целью достижения  бескомпромиссного качества. Предприятие расположено в 60 км к северо-востоку от Венеции в городе Сачиле (провинция Порденоне), в области, которая славится своими старинными традициями деревообработки.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="partners__sl">
+                <div class="partners__switches slider-switches">
+                    <button class="partners__switch slider-switch partners__switch--prev partners__switch--prev-three">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#arrow-prev"></use>
+                        </svg>
+                    </button>
+                    <button class="partners__switch slider-switch partners__switch--next partners__switch--next-three">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#arrow-next"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="container">
+                    <div class="partners__slider partners__slider-3 swiper">
+                        <img src="img/partners/logo-3.png" alt="" class="partners__logo">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="partners__text">
+                                    <p>Bechstein
+                                        - эксклюзивное качество с 1853 года. История этой немецкой фабрики летописью успеха на
+                                        фоне эпох и событий.
+                                        Инструменты
+                                        C. Bechstein отличаются замечательным характерным профилем звучания и
+                                        высокопрофессиональным игровым механизмом.
+                                    </p>
+                                    <p>Непревзойденные фортепиано для самых притязательных. Многие пианисты считают их идеальными.
+                                        Совершенная механика чутко реагирует на любой нюанс. </p>
+                                    <p>Рояли
+                                        C. Bechstein можно увидеть на концертных площадках, в консерваторских стенах и в домашних
+                                        музыкальных салонах. Везде, где раздаются чарующие звуки музыки.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partners__text">
+                                    <p>Bechstein
+                                        - эксклюзивное качество с 1853 года. История этой немецкой фабрики летописью успеха на
+                                        фоне эпох и событий.
+                                        Инструменты
+                                        C. Bechstein отличаются замечательным характерным профилем звучания и
+                                        высокопрофессиональным игровым механизмом.
+                                    </p>
+                                    <p>Непревзойденные фортепиано для самых притязательных. Многие пианисты считают их идеальными. Совершенная механика чутко реагирует на любой нюанс.</p>
+                                    <p>Рояли
+                                        C. Bechstein можно увидеть на концертных площадках, в консерваторских стенах и в домашних
+                                        музыкальных салонах. Везде, где раздаются чарующие звуки музыки.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="partners__sl">
+                <div class="partners__switches slider-switches">
+                    <button class="partners__switch slider-switch partners__switch--prev partners__switch--prev-four">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#arrow-prev"></use>
+                        </svg>
+                    </button>
+                    <button class="partners__switch slider-switch partners__switch--next partners__switch--next-four">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#arrow-next"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="container">
+                    <div class="partners__slider partners__slider-4 swiper">
+                        <img src="img/partners/logo-4.png" alt="" class="partners__logo">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="partners__text">
+                                    <p>August Forster производит фортепиано с 1859 года, в городе Лебау, в Германии.</p>
+                                    <p>Инструменты на 100 процентов изготавливаются в Германии, что подтверждается сертификатом “Союза немецких производителей фортепиано” и каждый из них это плод тщательной, очень длительной ручной работы, именно поэтому фабрика, несмотря на всемирную известность и признание производит не более 100-120 инструментов в год, каждый из которых уникален по своим звуковым характеристикам.</p>
+                                    <p>Инструменты August Forster идеальны в соотношении цена/качества, практически ничем не уступая мировым лидерам фортепиано строения.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partners__text">
+                                    <p>August Forster производит фортепиано с 1859 года, в городе Лебау, в Германии.</p>
+                                    <p>Инструменты на 100 процентов изготавливаются в Германии, что подтверждается сертификатом “Союза немецких производителей фортепиано” и каждый из них это плод тщательной, очень длительной ручной работы, именно поэтому фабрика, несмотря на всемирную известность и признание производит не более 100-120 инструментов в год, каждый из которых уникален по своим звуковым характеристикам.</p>
+                                    <p>Инструменты August Forster идеальны в соотношении цена/качества, практически ничем не уступая мировым лидерам фортепиано строения.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="partners__sl">
+                <div class="partners__switches slider-switches">
+                    <button class="partners__switch slider-switch partners__switch--prev partners__switch--prev-five">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#arrow-prev"></use>
+                        </svg>
+                    </button>
+                    <button class="partners__switch slider-switch partners__switch--next partners__switch--next-five">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#arrow-next"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="container">
+                    <div class="partners__slider partners__slider-5 swiper">
+                        <img src="img/partners/logo-5.png" alt="" class="partners__logo">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="partners__text">
+                                    <p>Фабрика Schimmel основана в 1885 году, в немецком городе Брауншвейг. Сегодня, посетив фабрику Schimmel, невозможно не обратить внимание на то, что ручная работа всюду сочетается с операциями, управляемыми электроникой. С помощью современных устройств осуществляется высверливание отверстий с точностью до микрометра. Все резные работы и инкрустация по сей день выполняются вручную.</p>
+                                    <p>Фабрика Schimmel выпускает 4 линейки инструментов, все они отличаются по уровню и звуковым характеристикам</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partners__text">
+                                    <p>Фабрика Schimmel основана в 1885 году, в немецком городе Брауншвейг. Сегодня, посетив фабрику Schimmel, невозможно не обратить внимание на то, что ручная работа всюду сочетается с операциями, управляемыми электроникой. С помощью современных устройств осуществляется высверливание отверстий с точностью до микрометра. Все резные работы и инкрустация по сей день выполняются вручную.</p>
+                                    <p>Фабрика Schimmel выпускает 4 линейки инструментов, все они отличаются по уровню и звуковым характеристикам</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+
+
+
+
+
+            <footer class="contacts">
     <div class="contacts__inner">
         <div class="contacts__maps">
             <div class="map map_1 active" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/pianos/61258286115/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Pianos</a><a href="https://yandex.ru/maps/162/almaty/category/music_store/184105910/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Музыкальный магазин в Алматы</a><a href="https://yandex.ru/maps/162/almaty/category/music_schools/184105912/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Музыкальное образование в Алматы</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUjyMaL1B" width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
@@ -254,14 +464,14 @@
                     <a href="tel:+ 7 700 107 85 07" class="contacts__tel">+ 7 700 107 85 07</a>
                     <a href="mailto:almaty@pianos.kz" class="contacts__email">almaty@pianos.kz</a>
                 </div>
-                <a href="" class="contacts__btn btn">Связаться с менеджером</a>
+                <a href="#popup_1" class="contacts__btn btn popup__btn">Связаться с менеджером</a>
                 <span>Работаем в Казахстане, Азербайджане и Узбекистане</span>
                 <a href="mailto:info@pianos.kz" class="contacts__email">info@pianos.kz</a>
             </div>
         </div>
     </div>
     <div class="contacts__copy">&copy; 2010-2021 PIANOS ПИАНИНО И РОЯЛИ</div>
-</section>
+</footer>
         </main>
     </div>
 </body>

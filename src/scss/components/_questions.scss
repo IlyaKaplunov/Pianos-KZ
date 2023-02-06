@@ -207,11 +207,11 @@
     }
 
     @include minitablet {
-        padding: 312px 0 45px 0;
+        padding: 265px 0 45px 0;
     }
 
     @include mobile {
-        padding-top: 287px;
+        padding-top: 275px;
     }
 
     &__bg {
@@ -251,7 +251,7 @@
         @include minitablet {
             display: flex;
             flex-direction: column-reverse;
-            padding-bottom: 44px;
+            padding-bottom: 55px;
             max-width: 100%;
             margin-left: 0;
         }

@@ -1,7 +1,8 @@
 .page-home {
-    padding-top: 430px;
-    padding-bottom: 253px;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     @include tablet {
         min-height: 0;

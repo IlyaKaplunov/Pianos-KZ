@@ -104,5 +104,9 @@
 
     &__btn {
         margin-top: 55px;
+
+        @include mobile {
+            margin-top: 20px;
+        }
     }
 }

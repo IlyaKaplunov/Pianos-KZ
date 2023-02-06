@@ -1,11 +1,9 @@
 .answer {
-    padding-top: 120px;
-    padding-bottom: 160px;
+    padding: 120px 0 160px 0;
     position: relative;
     
     @include minitablet {
-        padding-top: 65px;
-        padding-bottom: 60px;
+        padding: 65px 0 30px 0;
     }
 
     &__bg {
@@ -112,6 +110,10 @@
 
 .answer-form {
     padding-top: 30px;
+
+    @include mobile {
+        padding-top: 20px;
+    }
     
     &__group {
         &:not(:last-child) {
@@ -154,6 +156,11 @@
         line-height: 16px;
         color: #FFFFFF;
 
+        @include mobile {
+            font-size: 18px;
+            line-height: 16px;
+        }
+
         &::placeholder {
             font-weight: 300;
             font-size: 20px;
@@ -173,11 +180,31 @@
         line-height: 16px;
         margin-bottom: 20px;
         color: #DDC887;
+
+        @include mobile {
+            display: none;
+        }
+
+        &--mob {
+            display: none;
+
+            @include mobile {
+                display: block;
+                font-size: 14px;
+                line-height: 16px;
+                margin-top: 5px;
+                margin-bottom: 15px;
+            }
+        }
     }
 
     &__btn {
         margin: 0 auto;
         max-width: 402px;
         width: 100%;
+
+        @include mobile {
+            margin-top: 10px;
+        }
     }
 }

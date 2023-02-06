@@ -1,16 +1,16 @@
 .home {
     background: url("../img/home/bg-image.jpg") center / cover no-repeat;
-    padding: 255px 0 117px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     min-height: 100vh;
 
     @include tablet {
-        padding: 200px 0 117px 0;
+        padding: 120px 0 87px 0;
     }
 
     @include mobile {
         background: rgba(0, 0, 0, 0.83);
-        padding-top: 120px;
-        padding-bottom: 60px;
         min-height: auto;
     }
 
