@@ -5042,6 +5042,7 @@ body.lock {
   max-width: 822px;
   margin: 0 auto 72px;
   text-align: center;
+  padding: 0 15px;
 }
 @media (max-width: 576px) {
   .partners__title {
@@ -5115,27 +5116,14 @@ body.lock {
   background-size: cover;
   background-position: 50% 0%;
 }
-@media (max-width: 768px) {
-  .partners__sl:not(:last-child) {
-    margin-bottom: 70px;
-    padding: 100px 0;
-  }
-}
 @media (max-width: 1024px) {
   .partners__sl {
     background-position: center;
   }
 }
-@media (max-width: 768px) {
-  .partners__sl {
-    background-position: 0 0;
-    background-size: 100% 100%;
-  }
-}
 .partners__sl:nth-child(1) {
   background-image: url("../img/partners/bg-1.png");
-  padding-bottom: 70px;
-  padding-top: 60px;
+  padding: 60px 0 70px 0;
 }
 @media (max-width: 1024px) {
   .partners__sl:nth-child(1) {
@@ -5147,8 +5135,6 @@ body.lock {
 @media (max-width: 768px) {
   .partners__sl:nth-child(1) {
     background-image: url("../img/partners/bg-mob_1.png");
-    background-position: 0 0;
-    padding: 65px 0;
   }
 }
 .partners__sl:nth-child(2) {
@@ -5164,7 +5150,6 @@ body.lock {
 @media (max-width: 768px) {
   .partners__sl:nth-child(2) {
     background-image: url("../img/partners/bg-mob_2.png");
-    padding: 65px 0;
   }
 }
 .partners__sl:nth-child(3) {
@@ -5181,8 +5166,6 @@ body.lock {
 @media (max-width: 768px) {
   .partners__sl:nth-child(3) {
     background-image: url("../img/partners/bg-mob_3.png");
-    background-position: 0 0;
-    padding: 65px 0;
   }
 }
 .partners__sl:nth-child(4) {
@@ -5198,13 +5181,11 @@ body.lock {
 @media (max-width: 768px) {
   .partners__sl:nth-child(4) {
     background-image: url("../img/partners/bg-mob_4.png");
-    padding: 65px 0;
   }
 }
 .partners__sl:nth-child(5) {
   background-image: url("../img/partners/bg-5.png");
-  padding-bottom: 90px;
-  padding-top: 120px;
+  padding: 120px 0 90px 0;
 }
 @media (max-width: 1024px) {
   .partners__sl:nth-child(5) {
@@ -5215,7 +5196,6 @@ body.lock {
 @media (max-width: 768px) {
   .partners__sl:nth-child(5) {
     background-image: url("../img/partners/bg-mob_5.png");
-    padding: 65px 0;
   }
 }
 .partners__sl:nth-child(odd) .partners__slider {
@@ -5240,6 +5220,14 @@ body.lock {
 @media (max-width: 768px) {
   .partners__sl:nth-child(even) .partners__slider {
     margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .partners__sl {
+    background-position: 0 0;
+    background-size: 100% 100%;
+    margin-bottom: 70px;
+    padding: 65px 0 !important;
   }
 }
 .partners__slider {
