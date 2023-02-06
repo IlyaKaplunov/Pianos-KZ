@@ -392,6 +392,7 @@ body.lock {
     padding: 50px 30px;
     opacity: 0;
     visibility: hidden;
+    z-index: 10;
   }
   .header__menu.active {
     opacity: 1;
@@ -661,6 +662,7 @@ body.lock {
   position: absolute;
   top: -8px;
   right: -5px;
+  z-index: 1;
 }
 
 .burger {
@@ -673,6 +675,7 @@ body.lock {
     height: 22px;
     position: relative;
     margin-left: 20px;
+    z-index: 11;
   }
   .burger::before, .burger::after {
     content: "";
@@ -5073,7 +5076,12 @@ body.lock {
 .partners__switch--prev {
   left: 16%;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1810px) {
+  .partners__switch--prev {
+    left: 6%;
+  }
+}
+@media (max-width: 1440px) {
   .partners__switch--prev {
     left: 3%;
   }
@@ -5096,7 +5104,12 @@ body.lock {
 .partners__switch--next {
   right: 16%;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1810px) {
+  .partners__switch--next {
+    right: 6%;
+  }
+}
+@media (max-width: 1440px) {
   .partners__switch--next {
     right: 3%;
   }
@@ -5170,8 +5183,8 @@ body.lock {
   .partners__sl:nth-child(2) {
     background-image: url("../img/partners/bg-tabl_2.png");
     padding-bottom: 0;
-    background-position: center;
-    background-size: 100% 160%;
+    background-position-x: 35px;
+    background-size: 100% 177%;
   }
 }
 @media (max-width: 768px) {
@@ -5191,9 +5204,9 @@ body.lock {
 @media (max-width: 1024px) {
   .partners__sl:nth-child(3) {
     background-image: url("../img/partners/bg-tabl_3.png");
-    background-position: 0 -90px;
+    background-position: -12px -90px;
     padding-bottom: 20px;
-    background-size: 100%;
+    background-size: 100% 150%;
   }
 }
 @media (max-width: 768px) {
@@ -5252,6 +5265,11 @@ body.lock {
   margin-left: auto;
   margin-right: 50px;
 }
+@media (max-width: 1024px) {
+  .partners__sl:nth-child(odd) .partners__slider {
+    margin-right: 25px;
+  }
+}
 @media (max-width: 768px) {
   .partners__sl:nth-child(odd) .partners__slider {
     margin-right: 20px;
@@ -5262,9 +5280,19 @@ body.lock {
     margin: 0 auto;
   }
 }
+@media (max-width: 1440px) {
+  .partners__sl:nth-child(even) .partners__slider {
+    margin-left: 50px;
+  }
+}
 @media (max-width: 1200px) {
   .partners__sl:nth-child(even) .partners__slider {
     margin-left: 66px;
+  }
+}
+@media (max-width: 1024px) {
+  .partners__sl:nth-child(even) .partners__slider {
+    margin-left: 55px;
   }
 }
 @media (max-width: 768px) {
