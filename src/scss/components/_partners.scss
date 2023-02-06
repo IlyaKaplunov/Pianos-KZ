@@ -35,7 +35,11 @@
         &--prev {
             left: 16%;
 
-            @include minidesk {
+            @media (max-width: 1810px) {
+                left: 6%;
+            }
+
+            @include middledesk {
                 left: 3%;
             }
 
@@ -55,7 +59,11 @@
         &--next {
             right: 16%;
 
-            @include minidesk {
+            @media (max-width: 1810px) {
+                right: 6%;
+            }
+
+            @include middledesk {
                 right: 3%;
             }
 
@@ -122,8 +130,8 @@
             @include tablet {
                 background-image: url("../img/partners/bg-tabl_2.png");
                 padding-bottom: 0;
-                background-position: center;
-                background-size: 100% 160%;
+                background-position-x: 35px;
+                background-size: 100% 177%;
             }
 
             @include minitablet {
@@ -141,9 +149,9 @@
 
             @include tablet {
                 background-image: url("../img/partners/bg-tabl_3.png");
-                background-position: 0 -90px;
+                background-position: -12px -90px;
                 padding-bottom: 20px;
-                background-size: 100%;
+                background-size: 100% 150%;
             }
 
             @include minitablet {
@@ -171,7 +179,6 @@
 
             @include minitablet {
                 background-position-x: 46px;
-                
             }
 
             @media (max-width: 610px) {
@@ -200,6 +207,10 @@
                 margin-left: auto;
                 margin-right: 50px;
 
+                @include tablet {
+                    margin-right: 25px;
+                }
+
                 @include minitablet {
                     margin-right: 20px;
                 }
@@ -212,8 +223,16 @@
 
         &:nth-child(even) {
             .partners__slider {
+                @include middledesk {
+                    margin-left: 50px;
+                }
+
                 @include minidesk {
                     margin-left: 66px;
+                }
+
+                @include tablet {
+                    margin-left: 55px;
                 }
 
                 @include minitablet {
