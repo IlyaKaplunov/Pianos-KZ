@@ -5135,6 +5135,7 @@ body.lock {
 @media (max-width: 768px) {
   .partners__sl:nth-child(1) {
     background-image: url("../img/partners/bg-mob_1.png");
+    background-position: 0 0;
   }
 }
 .partners__sl:nth-child(2) {
@@ -5166,6 +5167,7 @@ body.lock {
 @media (max-width: 768px) {
   .partners__sl:nth-child(3) {
     background-image: url("../img/partners/bg-mob_3.png");
+    background-position: 0 0;
   }
 }
 .partners__sl:nth-child(4) {
