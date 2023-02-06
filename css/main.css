@@ -5252,6 +5252,11 @@ body.lock {
     margin: 0 auto;
   }
 }
+@media (max-width: 510px) {
+  .partners__slider {
+    max-width: 286px;
+  }
+}
 @media (max-width: 576px) {
   .partners__slider .swiper-slide {
     text-align: center;
