@@ -4,14 +4,15 @@
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
+    padding: 200px 0 87px 0;
 
     @include tablet {
-        padding: 120px 0 87px 0;
+        min-height: auto;
     }
 
     @include mobile {
         background: rgba(0, 0, 0, 0.83);
-        min-height: auto;
+        padding: 120px 0 100px 0;
     }
 
     &__body {

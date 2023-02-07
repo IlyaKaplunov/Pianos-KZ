@@ -917,7 +917,6 @@ body.lock {
 }
 
 .page-home {
-  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -928,16 +927,18 @@ body.lock {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  min-height: 100vh;
+  padding: 200px 0 87px 0;
 }
 @media (max-width: 1024px) {
   .page-home {
-    min-height: 0;
-    padding: 300px 0 230px 0;
+    min-height: auto;
   }
 }
 @media (max-width: 576px) {
   .page-home {
-    padding: 170px 0 130px 0;
+    background: rgba(0, 0, 0, 0.83);
+    padding: 150px 0 90px 0;
   }
 }
 .page-home--customization {
@@ -966,6 +967,7 @@ body.lock {
   text-align: center;
   max-width: 650px;
   margin: 0 auto;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 @media (max-width: 1024px) {
   .page-home__title {
@@ -977,6 +979,7 @@ body.lock {
   .page-home__title {
     font-size: 27px;
     line-height: 30px;
+    letter-spacing: 1.5px;
   }
 }
 .page-home__title::after {
@@ -1257,16 +1260,17 @@ body.lock {
   -ms-flex-pack: center;
   justify-content: center;
   min-height: 100vh;
+  padding: 200px 0 87px 0;
 }
 @media (max-width: 1024px) {
   .home {
-    padding: 120px 0 87px 0;
+    min-height: auto;
   }
 }
 @media (max-width: 576px) {
   .home {
     background: rgba(0, 0, 0, 0.83);
-    min-height: auto;
+    padding: 120px 0 100px 0;
   }
 }
 .home__body {
@@ -3285,7 +3289,7 @@ body.lock {
   font-size: 24px;
   line-height: 23px;
   color: #000000;
-  font-family: "Garamond Premier Pro";
+  font-family: "GaramondPremrPro";
 }
 @media (max-width: 576px) {
   .media__caption {
@@ -3803,7 +3807,7 @@ body.lock {
     position: absolute;
     bottom: -200px;
     z-index: -1;
-    left: 0;
+    left: -15px;
     background-repeat: no-repeat;
     background-size: 100%;
     display: block;
