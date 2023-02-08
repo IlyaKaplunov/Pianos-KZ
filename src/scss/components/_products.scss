@@ -8,6 +8,10 @@
     
     &__title {
         margin-bottom: 38px;
+
+        @include mobile {
+            margin-bottom: 20px;
+        }
     }
 
     &__subtitle {
