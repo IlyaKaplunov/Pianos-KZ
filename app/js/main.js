@@ -9,8 +9,8 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_prod_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/prod-menu */ "./src/js/components/prod-menu.js");
-/* harmony import */ var _components_prod_menu__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_prod_menu__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_dropdowns__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/dropdowns */ "./src/js/components/dropdowns.js");
+/* harmony import */ var _components_dropdowns__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_dropdowns__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/sliders */ "./src/js/components/sliders.js");
@@ -178,6 +178,51 @@ if (burger) {
 
 /***/ }),
 
+/***/ "./src/js/components/dropdowns.js":
+/*!****************************************!*\
+  !*** ./src/js/components/dropdowns.js ***!
+  \****************************************/
+/***/ (() => {
+
+let isMobile = {
+  Android: function () {
+    return navigator.userAgent.match(/Android/i);
+  },
+  BlackBerry: function () {
+    return navigator.userAgent.match(/BlackBerry/i);
+  },
+  iOS: function () {
+    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  },
+  Opera: function () {
+    return navigator.userAgent.match(/Opera Mini/i);
+  },
+  Windows: function () {
+    return navigator.userAgent.match(/IEMobile/i);
+  },
+  any: function () {
+    return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+  }
+};
+let body = document.querySelector('body');
+if (isMobile.any()) {
+  body.classList.add('touch');
+  let arrow = document.querySelectorAll('.arrow');
+  for (i = 0; i < arrow.length; i++) {
+    let thisLink = arrow[i].previousElementSibling;
+    let subMenu = arrow[i].nextElementSibling;
+    let thisArrow = arrow[i];
+    arrow[i].addEventListener('click', function (e) {
+      subMenu.classList.toggle('open');
+      thisArrow.classList.toggle('active');
+    });
+  }
+} else {
+  body.classList.add('mouse');
+}
+
+/***/ }),
+
 /***/ "./src/js/components/popups.js":
 /*!*************************************!*\
   !*** ./src/js/components/popups.js ***!
@@ -272,53 +317,6 @@ document.addEventListener('keydown', function (e) {
     popupClose(popupActive);
   }
 });
-
-/***/ }),
-
-/***/ "./src/js/components/prod-menu.js":
-/*!****************************************!*\
-  !*** ./src/js/components/prod-menu.js ***!
-  \****************************************/
-/***/ (() => {
-
-isMobile = {
-  Android: function () {
-    return navigator.userAgent.match(/Android/i);
-  },
-  BlackBerry: function () {
-    return navigator.userAgent.match(/BlackBerry/i);
-  },
-  iOS: function () {
-    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  Opera: function () {
-    return navigator.userAgent.match(/Opera Mini/i);
-  },
-  Windows: function () {
-    return navigator.userAgent.match(/IEMobile/i);
-  },
-  any: function () {
-    return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
-  }
-};
-let body = document.querySelector('body');
-if (isMobile.any()) {
-  body.classList.add('touch');
-  let arrow = document.querySelectorAll('.arrow');
-  for (i = 0; i < arrow.length; i++) {
-    let thisLink = arrow[i].previousElementSibling;
-    let subMenu = arrow[i].nextElementSibling;
-    let thisArrow = arrow[i];
-    thisLink.classList.add('parent');
-    arrow[i].addEventListener('click', function () {
-      subMenu.classList.toggle('open');
-      thisArrow.classList.toggle('active');
-    });
-  }
-} else {
-  body.classList.add('mouse');
-}
-console.log("Привет");
 
 /***/ }),
 

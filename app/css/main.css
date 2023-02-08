@@ -1952,34 +1952,17 @@ body.lock {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.products__submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  display: none;
-  padding-top: 5px;
-  z-index: 1;
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-  background-color: #fff;
+@media (max-width: 576px) {
+  .products__arrow {
+    top: 11px;
+  }
 }
-.products__submenu li {
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
+.products__arrow.active {
+  -webkit-transform: rotate(270deg) !important;
+  -ms-transform: rotate(270deg) !important;
+  transform: rotate(270deg) !important;
 }
-.products__submenu li:not(:last-child) {
-  margin-bottom: 5px;
-}
-.products__submenu li:hover {
-  background-color: #000;
-}
-.products__submenu li:hover .products__submenu-link {
-  color: #fff;
-}
-.products__menu {
+.products__menu-list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -1988,36 +1971,59 @@ body.lock {
   margin-bottom: 24px;
 }
 @media (max-width: 1024px) {
-  .products__menu {
+  .products__menu-list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .products__menu-list {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
     gap: 8px 0;
   }
 }
-.products__menu li:hover > ul {
-  display: block;
+.products__menu-list > li {
+  position: relative;
+  text-align: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-.products__menu li:hover .products__menu-link {
-  color: #fff;
+.products__menu-list > li:hover {
   background-color: #000;
 }
-.products__menu li:hover .products__arrow {
+@media (max-width: 768px) {
+  .products__menu-list > li:hover {
+    background-color: #fff;
+  }
+}
+.products__menu-list > li:hover .products__menu-link {
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .products__menu-list > li:hover .products__menu-link {
+    color: #000;
+  }
+}
+.products__menu-list > li:hover .products__arrow {
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
   fill: #fff;
 }
-.products__menu > li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  text-align: center;
+@media (max-width: 768px) {
+  .products__menu-list > li:hover .products__arrow {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    fill: #000;
+  }
 }
 .products__menu-link {
   width: 100%;
   border: 1px solid #000000;
-  padding: 12px 10px 12px 10px;
+  padding: 12px 10px;
   color: #000;
   font-weight: 450;
   font-size: 18px;
@@ -2031,7 +2037,53 @@ body.lock {
   .products__menu-link {
     font-size: 16px;
     line-height: 20px;
+    padding: 10px;
   }
+}
+.products__submenu-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  padding-top: 5px;
+  z-index: 1;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: #fff;
+}
+@media (max-width: 576px) {
+  .products__submenu-list {
+    background-color: transparent;
+    padding-top: 10px;
+  }
+}
+.products__submenu-list li {
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+@media (max-width: 576px) {
+  .products__submenu-list li {
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.products__submenu-list li:not(:last-child) {
+  margin-bottom: 5px;
+}
+@media (max-width: 576px) {
+  .products__submenu-list li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+.products__submenu-list li:hover {
+  background-color: #000;
+}
+.products__submenu-list li:hover .products__submenu-link {
+  color: #fff;
 }
 .products__submenu-link {
   width: 100%;
@@ -2045,6 +2097,14 @@ body.lock {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
+  background-color: #fff;
+}
+@media (max-width: 576px) {
+  .products__submenu-link {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px;
+  }
 }
 .products__inner {
   display: -ms-grid;
@@ -2172,6 +2232,15 @@ body.lock {
     line-height: 18px;
     margin-top: 13px;
   }
+}
+
+body.mouse .products__menu-list > li:hover .products__submenu-list {
+  display: block;
+}
+
+body.touch .products__submenu-list.open {
+  display: block;
+  position: static;
 }
 
 .service {

@@ -54,77 +54,68 @@
         transform: rotate(90deg);
         cursor: pointer;
         transition: all 0.2s ease-in-out;
-    }
 
-    &__submenu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        display: none;
-        padding-top: 5px;
-        z-index: 1;
-        -webkit-transition: all 0.2s;
-        transition: all 0.2s;
-        background-color: #fff;
-        
-        li {
-            transition: all 0.2s;
-
-            &:not(:last-child) {
-                margin-bottom: 5px;
-            }
-
-            &:hover {
-                background-color: #000;
-
-                .products__submenu-link {
-                    color: #fff;
-                }
-            }
+        @include mobile {
+            top: 11px;
+        }
+    
+        &.active {
+            transform: rotate(270deg) !important;
         }
     }
 
-    &__menu {
+    &__menu-list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 10px 20px;
         margin-bottom: 24px;
 
         @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
             grid-template-columns: repeat(1, 1fr);
             gap: 8px 0;
         }
 
-        li {
+        & > li {
+            position: relative;
+            text-align: center;
+            transition: all 0.2s ease-in-out;
+
             &:hover {
-                & > ul {
-                    display: block;
+                background-color: #000;
+
+                @include minitablet {
+                    background-color: #fff;
                 }
 
                 .products__menu-link {
                     color: #fff;
-                    background-color: #000;
+
+                    @include minitablet {
+                        color: #000;
+                    }
                 }
 
                 .products__arrow {
                     transform: rotate(270deg);
                     fill: #fff;
+
+                    @include minitablet {
+                        transform: rotate(90deg);
+                        fill: #000;
+                    }
                 }
             }
-        }
-
-        & > li {
-            display: flex;
-            position: relative;
-            text-align: center;
         }
     }
 
     &__menu-link {
         width: 100%;
         border: 1px solid #000000;
-        padding: 12px 10px 12px 10px; 
+        padding: 12px 10px; 
         color: #000;
         font-weight: 450;
         font-size: 18px;
@@ -135,6 +126,51 @@
         @include mobile {
             font-size: 16px;
             line-height: 20px;
+            padding: 10px;
+        }
+    }
+
+    &__submenu-list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none;
+        padding-top: 5px;
+        z-index: 1;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        background-color: #fff;
+
+        @include mobile {
+            background-color: transparent;
+            padding-top: 10px;
+        }
+        
+        li {
+            transition: all 0.2s;
+
+            @include mobile {
+                max-width: 370px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 5px;
+
+                @include mobile {
+                    margin-bottom: 10px;
+                }
+            }
+
+            &:hover {
+                background-color: #000;
+
+                .products__submenu-link {
+                    color: #fff;
+                }
+            }
         }
     }
 
@@ -148,6 +184,13 @@
         line-height: 22px;    
         display: block;
         transition: all 0.2s;
+        background-color: #fff;
+
+        @include mobile {
+            font-size: 16px;
+            line-height: 20px;
+            padding: 10px;
+        }
     }
 
     &__inner {
@@ -275,3 +318,12 @@
     }
 }
 
+body.mouse .products__menu-list > li:hover .products__submenu-list {
+    display: block;
+}
+
+body.touch .products__submenu-list.open{
+    display: block;
+    position: static;
+}
+  
