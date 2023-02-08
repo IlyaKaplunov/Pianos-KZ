@@ -128,7 +128,7 @@
         transition: all 0.2s ease-in-out;
 
         @include mobile {
-            font-size: 16px;
+            font-size: 18px;
             line-height: 20px;
             padding: 10px;
         }
@@ -149,16 +149,13 @@
         @include mobile {
             background-color: transparent;
             padding-top: 10px;
+            max-width: 340px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         li {
             transition: all 0.2s;
-
-            @include mobile {
-                max-width: 370px;
-                margin-left: auto;
-                margin-right: auto;
-            }
 
             &:not(:last-child) {
                 margin-bottom: 5px;
