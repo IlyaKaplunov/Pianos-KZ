@@ -1898,6 +1898,11 @@ body.lock {
 .products__title {
   margin-bottom: 38px;
 }
+@media (max-width: 576px) {
+  .products__title {
+    margin-bottom: 20px;
+  }
+}
 .products__subtitle {
   font-family: "GaramondPremrPro";
   font-size: 24px;
