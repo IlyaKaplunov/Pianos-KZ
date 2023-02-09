@@ -1998,7 +1998,7 @@ body.lock {
 .products__menu-list > li:hover {
   background-color: #000;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .products__menu-list > li:hover {
     background-color: #fff;
   }
@@ -2006,7 +2006,7 @@ body.lock {
 .products__menu-list > li:hover .products__menu-link {
   color: #fff;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .products__menu-list > li:hover .products__menu-link {
     color: #000;
   }
@@ -2017,7 +2017,7 @@ body.lock {
   transform: rotate(270deg);
   fill: #fff;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .products__menu-list > li:hover .products__arrow {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -2056,21 +2056,26 @@ body.lock {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
-  background-color: #fff;
+}
+@media (max-width: 1024px) {
+  .products__submenu-list {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 @media (max-width: 576px) {
   .products__submenu-list {
     background-color: transparent;
     padding-top: 10px;
     max-width: 340px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 .products__submenu-list li {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
+  background-color: #fff;
 }
 .products__submenu-list li:not(:last-child) {
   margin-bottom: 5px;
@@ -2098,7 +2103,6 @@ body.lock {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
-  background-color: #fff;
 }
 @media (max-width: 576px) {
   .products__submenu-link {
