@@ -139,16 +139,17 @@
         top: 100%;
         left: 0;
         width: 100%;
-        display: none;
+        opacity: 0;
+        visibility: hidden;
         padding-top: 5px;
         z-index: 1;
-        -webkit-transition: all 0.2s;
         transition: all 0.2s;
 
         @include tablet {
             max-width: 400px;
             margin-left: auto;
             margin-right: auto;
+            transition: none;
         }
 
         @include mobile {
@@ -323,10 +324,15 @@
 }
 
 body.mouse .products__menu-list > li:hover .products__submenu-list {
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 body.touch .products__submenu-list.open{
-    display: block;
-    position: static;
+    opacity: 1;
+    visibility: visible;
+
+    @include tablet {
+        position: static;
+    }
 } 

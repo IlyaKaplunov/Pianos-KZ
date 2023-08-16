@@ -1,4 +1,4 @@
-let isMobile = {
+var isMobile = {
     Android: function() {
         return navigator.userAgent.match(/Android/i);
     },
@@ -18,7 +18,11 @@ let isMobile = {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
-  
+
+if (isMobile.any()) {
+    document.querySelector('html').classList.add('_touch');
+}
+ 
 let body = document.querySelector('body');
   
 if (isMobile.any()) {
@@ -41,3 +45,18 @@ if (isMobile.any()) {
     body.classList.add('mouse');
 }
   
+
+/* window.onload = function() {
+    document.addEventListener('click', documentActions);
+
+    function documentActions(e) {
+        const targetElement = e.target;
+        
+        if (window.innerWidth > 768 && isMobile.any()) {
+            if (targetElement.classList.contains('arrow')) {
+                targetElement.closest('.products__menu-item').classList.toggle('_hover');
+            }
+        }
+    }
+}
+console.log('Привет'); */

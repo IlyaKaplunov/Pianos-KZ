@@ -2050,7 +2050,8 @@ body.lock {
   top: 100%;
   left: 0;
   width: 100%;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   padding-top: 5px;
   z-index: 1;
   -webkit-transition: all 0.2s;
@@ -2062,6 +2063,9 @@ body.lock {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
   }
 }
 @media (max-width: 576px) {
@@ -2240,12 +2244,18 @@ body.lock {
 }
 
 body.mouse .products__menu-list > li:hover .products__submenu-list {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 body.touch .products__submenu-list.open {
-  display: block;
-  position: static;
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 1024px) {
+  body.touch .products__submenu-list.open {
+    position: static;
+  }
 }
 
 .service {
@@ -3744,6 +3754,7 @@ body.touch .products__submenu-list.open {
   height: 1019px;
   position: absolute;
   top: -70px;
+  right: 25px;
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -3850,10 +3861,10 @@ body.touch .products__submenu-list.open {
 .consultation-rent__img::after {
   content: "";
   background: url("../img/consultation/img-2.png");
-  width: 1026px;
-  height: 1019px;
+  width: 930px;
+  height: 1170px;
   position: absolute;
-  top: -184px;
+  top: -135px;
   left: 500px;
   background-repeat: no-repeat;
   background-size: 100%;
